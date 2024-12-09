@@ -10,5 +10,5 @@ import {NgForOf} from '@angular/common';
   styleUrl: './main-menu.component.css'
 })
 export class MainMenuComponent {
-  mainMenuItems : string[] = ['Home' , 'Products' , 'Sale' , 'New Arrival' , 'Contacts'];
+  mainMenuItems : string[] = ['Home' , 'Products' , 'Sale' , 'New_Arrival' , 'Contacts' , 'Services'];
 }
