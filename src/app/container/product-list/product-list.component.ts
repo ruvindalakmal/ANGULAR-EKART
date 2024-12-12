@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgForOf, NgIf, NgStyle} from '@angular/common';
 import {ProductComponent} from './product/product.component';
+import {FilterComponent} from './filter/filter.component';
 
 @Component({
   selector: 'product-list',
@@ -8,7 +9,8 @@ import {ProductComponent} from './product/product.component';
     NgForOf,
     NgIf,
     NgStyle,
-    ProductComponent
+    ProductComponent,
+    FilterComponent
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
@@ -540,4 +542,9 @@ export class ProductListComponent {
       slug: "michael-feburary-sk8-hi"
     }
   ];
+
+  totalProductCount = this.products.length;
+  totalProductInStock = this.products.filter(p => p.is_in_inventory === true).length;
+  totalProductOutOfStock = this.products.filter(p => p.is_in_inventory === false).length;
+
 }

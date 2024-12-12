@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {NgIf} from '@angular/common';
+import {NgClass, NgIf, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-search',
   imports: [
     FormsModule,
-    NgIf
+    NgIf,
+    NgStyle,
+    NgClass
   ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
