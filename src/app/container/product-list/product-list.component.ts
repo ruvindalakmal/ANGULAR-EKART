@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {NgForOf, NgIf, NgStyle} from '@angular/common';
+import {ProductComponent} from './product/product.component';
 
 @Component({
   selector: 'product-list',
   imports: [
     NgForOf,
     NgIf,
-    NgStyle
+    NgStyle,
+    ProductComponent
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
