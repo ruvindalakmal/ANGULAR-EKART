@@ -11,9 +11,9 @@
   <!--disabled , hidden , checked properties not useful when string Interpolation.So that properties we use Property Binding-->
 <!--  <input (input)="onNameChange($event)">-->
 <!--  <p>Name : {{name}}</p>-->
-  <app-search></app-search>
+  <app-search (searchTextChanged) = "setSearchText($event)"></app-search>
 <!--  <div *ngFor="let item of listOfStrings">-->
 <!--    <p>Current Element of array is {{item}}</p>-->
 <!--  </div>-->
-  <product-list></product-list>
+  <product-list [searchText]="searchText"></product-list>
 </div>

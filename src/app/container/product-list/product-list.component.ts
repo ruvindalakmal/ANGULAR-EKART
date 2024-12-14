@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {NgForOf, NgIf, NgStyle} from '@angular/common';
 import {ProductComponent} from './product/product.component';
 import {FilterComponent} from './filter/filter.component';
@@ -546,6 +546,9 @@ export class ProductListComponent {
   totalProductCount = this.products.length;
   totalProductInStock = this.products.filter(p => p.is_in_inventory === true).length;
   totalProductOutOfStock = this.products.filter(p => p.is_in_inventory === false).length;
+
+  @Input()
+  searchText : string = "";
 
   selectedFilterRadioButton : string = 'all';
 
